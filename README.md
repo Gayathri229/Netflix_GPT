@@ -1,11 +1,13 @@
-#Netflix GPT
+# Netflix GPT
 
 - Create React App
 - Configured Tailwind CSS
+- Header
+- Sign In/ Sign Up form
 
 
 
-Features:
+# Features:
 -Login/Sign Up page
     - Sign In/ Sign Up Form
     - redirect to  browse page
