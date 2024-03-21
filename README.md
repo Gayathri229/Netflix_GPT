@@ -7,6 +7,12 @@
 - Login
 - Sign In/ Sign Up form
 - Form validation
+- Firebase setup
+- Sign In/Sign Up authentication logic (sign in user api)
+- Created redux store with user slice
+- Implemented sign out
+- update profile
+
 
 
 
