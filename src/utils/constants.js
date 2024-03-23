@@ -19,3 +19,5 @@ export const API_OPTIONS = {
 };  
 
 export const NOW_PLAYING_MOVIES = "https://api.themoviedb.org/3/movie/now_playing?page=1";
+
+export const MOVIE_TRAILER = "https://api.themoviedb.org/3/movie/1011985/videos?language=en-US";

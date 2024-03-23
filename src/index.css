@@ -5,3 +5,17 @@
 .bg-zoom {
   background-size: 120%;
 }
+
+
+@font-face {
+  font-family: 'netflixSansRegular';
+  src: url('../src/assets/fonts/NetflixSans-Regular.otf') format('otf');
+}
+
+
+@font-face {
+  font-family: 'netflixSansBold';
+  src: url('../src/assets/fonts/NetflixSans-Bold.otf') format('otf');
+}
+
+
