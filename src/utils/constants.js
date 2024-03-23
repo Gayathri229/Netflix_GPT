@@ -6,3 +6,16 @@ export const LANDING_PAGE_BG =
 
 export const USER_ICON =
   "https://occ-0-6059-3662.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXYofKdCJceEP7pdxcEZ9wt80GsxEyXIbnG_QM8znksNz3JexvRbDLr0_AcNKr2SJtT-MLr1eCOA-e7xlDHsx4Jmmsi5HL8.png?r=1d4";
+
+export const USER_AVATAR =
+  "https://occ-0-6059-3662.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e";
+
+export const API_OPTIONS = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZDVlYTk0OWU2MDE4YjAxM2Y0ODRiNmExZjkyOThiNCIsInN1YiI6IjY1ZmQ3MTFiMDkyOWY2MDE2NDk5Y2UxYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ccr591R-q1SDuCKjooStLevMUT8qiKSSiedMMT7Pl88'
+  }
+};  
+
+export const NOW_PLAYING_MOVIES = "https://api.themoviedb.org/3/movie/now_playing?page=1";
