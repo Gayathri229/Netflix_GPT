@@ -28,25 +28,19 @@
 - Built Secondary container
 - Built Movie List
 - Built Movie Card
-- 
-
-
-
-
-
+- Built different movie lists (Now playing, Popular, Top rated etc)
 
 # Features:
--Login/Sign Up page
-    - Sign In/ Sign Up Form
-    - redirect to  browse page
-- Browse page (after authentication)
-    - Header
-    - Main movie
-        - Trailer in background
-        - Title & Description
-        - Movie Suggestions
-            - Movies List * N (Horizontally scrollable)
-- Netflix GPT
-    - Search Bar
-    - Movie Suggestions
 
+-Login/Sign Up page - Sign In/ Sign Up Form - redirect to browse page
+
+- Browse page (after authentication)
+  - Header
+  - Main movie
+    - Trailer in background
+    - Title & Description
+    - Movie Suggestions
+      - Movies List \* N (Horizontally scrollable)
+- Netflix GPT
+  - Search Bar
+  - Movie Suggestions
