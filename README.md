@@ -25,6 +25,10 @@
 - Update store with Trailer data
 - Embedded background youtube video and made it autoplay, mute and loop
 - CSS classes for Main container
+- Built Secondary container
+- Built Movie List
+- Built Movie Card
+- 
 
 
 

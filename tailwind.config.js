@@ -8,5 +8,6 @@ module.exports = {
       netflixSansBold: ["Netflix Sans Bold", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
+
 };

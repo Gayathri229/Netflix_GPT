@@ -2,9 +2,19 @@ import Header from "./Header";
 import useFetchNowPlayingMovies from "../hooks/useFetchNowPlayingMovies";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import useFetchPopularMovies from "../hooks/useFetchPopularMovies";
+import useFetchTopRatedMovies from "../hooks/useFetchTopRatedMovies";
+import useFetchUpcomingMovies from "../hooks/useFetchUpcomingMovies";
+import useFetchTrendingData from "../hooks/useFetchTrendingData";
+import useFetchTvShows from "../hooks/useFetchTvShows";
 
 const Browse = () => {
-  const nowPlayingMovies = useFetchNowPlayingMovies();
+  useFetchNowPlayingMovies();
+  useFetchPopularMovies();
+  useFetchTopRatedMovies();
+  useFetchUpcomingMovies();
+  useFetchTrendingData();
+  useFetchTvShows();
 
   return (
     <div>

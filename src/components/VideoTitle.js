@@ -4,7 +4,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-screen aspect-video pt-[20%] px-16 absolute bg-gradient-to-r from-black font-netflixSansRegular">
+    <div className="w-screen aspect-video pt-[18%] px-16 absolute bg-gradient-to-r from-black font-netflixSansRegular">
       <h1 className="text-6xl font-netflixSansBold text-white ">{title}</h1>
       <p className="py-6 text-lg w-[40%] text-white">{overview}</p>
       <div className="flex items-center">
