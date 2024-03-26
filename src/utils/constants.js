@@ -60,4 +60,4 @@ export const SUPPORTED_LANGUAGES = [
   },
 ];
 
-export const GEMINIAI_KEY = "AIzaSyD_U2Kl_5KEmhrOwBOekheU5rJgemGBnjs";
+export const GEMINIAI_KEY = process.env.REACT_APP_BARD_KEY;

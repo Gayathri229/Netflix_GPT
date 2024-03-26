@@ -3,7 +3,6 @@ import { NETFLIX_BG } from "../utils/constants";
 import lang from "../utils/languageConstants";
 import { useSelector } from "react-redux";
 import { genAI } from "../utils/geminiai";
-import openai from "../utils/openai";
 import BardAIResultError from "./BardAIResultError";
 
 const GPTSearchBar = () => {
@@ -28,7 +27,6 @@ const GPTSearchBar = () => {
       <BardAIResultError/>
     }
 
-    
   };
 
   return (
