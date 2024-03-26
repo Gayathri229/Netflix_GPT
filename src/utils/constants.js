@@ -48,7 +48,7 @@ export const SUPPORTED_LANGUAGES = [
   },
   {
     identifier: "tamil",
-    name: "Tamil",
+    name: "தமிழ்",
   },
   {
     identifier: "hindi",
@@ -59,3 +59,12 @@ export const SUPPORTED_LANGUAGES = [
     name: "French",
   },
 ];
+
+
+export const OPENAI_KEY = "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";
+
+//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
+
+export const OPENAI_KEY2 = "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";
+
+export const GEMINIAI_KEY = "AIzaSyD_U2Kl_5KEmhrOwBOekheU5rJgemGBnjs";
