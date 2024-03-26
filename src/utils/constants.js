@@ -59,5 +59,3 @@ export const SUPPORTED_LANGUAGES = [
     name: "French",
   },
 ];
-
-export const GEMINIAI_KEY = process.env.REACT_APP_BARD_KEY;
