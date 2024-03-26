@@ -60,6 +60,4 @@ export const SUPPORTED_LANGUAGES = [
   },
 ];
 
-// export const OPENAI_KEY = "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";
-
 export const GEMINIAI_KEY = "AIzaSyD_U2Kl_5KEmhrOwBOekheU5rJgemGBnjs";
