@@ -1,5 +1,5 @@
 import Header from "./Header";
-import { LANDING_PAGE_BG, USER_AVATAR } from "../utils/constants";
+import { NETFLIX_BG, USER_AVATAR } from "../utils/constants";
 import { useRef, useState } from "react";
 import { checkValidData } from "../utils/validate";
 import {
@@ -95,7 +95,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={LANDING_PAGE_BG} alt="Sign in background" />
+        <img src={NETFLIX_BG} alt="Sign in background" />
         <div className="absolute bg-black inset-0 opacity-60"></div>
       </div>
       <form

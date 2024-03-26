@@ -29,6 +29,8 @@
 - Built Movie List
 - Built Movie Card
 - Built different movie lists (Now playing, Popular, Top rated etc)
+- Created GPT Search page & GPT Search Bar
+- Added Multi language feature for GPT page
 
 # Features:
 

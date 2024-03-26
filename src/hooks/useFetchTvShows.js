@@ -8,7 +8,6 @@ const useFetchTvShows = () => {
   const getTvShows = async () => {
     const tvShowsData = await fetch(TV_SHOWS, API_OPTIONS);
     const json = await tvShowsData.json();
-    console.log("Tv shows",json)
     dispatch(addTvShows(json?.results));
   };
 

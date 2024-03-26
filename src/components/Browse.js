@@ -7,8 +7,11 @@ import useFetchTopRatedMovies from "../hooks/useFetchTopRatedMovies";
 import useFetchUpcomingMovies from "../hooks/useFetchUpcomingMovies";
 import useFetchTrendingData from "../hooks/useFetchTrendingData";
 import useFetchTvShows from "../hooks/useFetchTvShows";
+import GPTSearchPage from "./GPTSearchPage";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
+  const showGPTSearch = useSelector((store) => store.gptSearch.showGPTSearch);
   useFetchNowPlayingMovies();
   useFetchPopularMovies();
   useFetchTopRatedMovies();
@@ -19,8 +22,14 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGPTSearch ? (
+        <GPTSearchPage />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 };
