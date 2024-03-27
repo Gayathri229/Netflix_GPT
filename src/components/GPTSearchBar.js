@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { API_OPTIONS, NETFLIX_BG } from "../utils/constants";
+import { API_OPTIONS } from "../utils/constants";
 import lang from "../utils/languageConstants";
 import { useDispatch, useSelector } from "react-redux";
 import { genAI } from "../utils/geminiai";
@@ -57,30 +57,24 @@ const GPTSearchBar = () => {
   };
 
   return (
-    <div className="">
-      <div className="fixed -z-10">
-        <img src={NETFLIX_BG} alt="Sign in background" />
-        <div className="absolute bg-black inset-0 opacity-60"></div>
-      </div>
-      <div className="flex justify-center">
-        <form
-          className="w-1/2 pt-[8%] grid grid-cols-12"
-          onSubmit={(event) => event.preventDefault()}
+    <div className="flex justify-center pt-[40%] md:pt-[8%]">
+      <form
+        className="md:w-1/2 w-full grid grid-cols-12 "
+        onSubmit={(event) => event.preventDefault()}
+      >
+        <input
+          type="text"
+          ref={searchRef}
+          className="p-4 my-4 mx-2 md:m-4 col-span-9 rounded-sm font-netflixSansRegular bg-black bg-opacity-90 border border-white text-white"
+          placeholder={lang[langKey].gptSearchPlaceholder}
+        />
+        <button
+          className="my-4 mx-2 px-0 py-2 md:px-4 md:m-4 bg-[#e50914] text-white col-span-3 rounded-sm font-netflixSansBold"
+          onClick={handleBardSearch}
         >
-          <input
-            type="text"
-            ref={searchRef}
-            className="p-4 m-4 col-span-9 rounded-sm font-netflixSansRegular bg-black bg-opacity-90 border border-white text-white"
-            placeholder={lang[langKey].gptSearchPlaceholder}
-          />
-          <button
-            className="m-4 px-4 py-2 bg-[#e50914] text-white col-span-3 rounded-sm font-netflixSansBold"
-            onClick={handleBardSearch}
-          >
-            {lang[langKey].search}
-          </button>
-        </form>
-      </div>
+          {lang[langKey].search}
+        </button>
+      </form>
     </div>
   );
 };

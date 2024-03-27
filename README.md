@@ -50,3 +50,10 @@
 - Netflix GPT
   - Search Bar
   - Movie Suggestions
+
+
+# Responsive screens
+In tailwind CSS,
+default - By default the styles are applied for mobile
+sm - applies for tabs (screens which are bigger than mobile phones)
+md - applies for desktop (screens which are bigger than medium screens i.e. tabs)
