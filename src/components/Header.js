@@ -86,7 +86,7 @@ const Header = () => {
             className="flex p-2 mx-5 justify-center items-center font-netflixSansBold bg-black bg-opacity-80 border border-white border-opacity-60 text-white rounded-sm"
           >
             <CiSearch size={24} className="mr-2" />
-           {showGptSearch ? "Browse" : "GPT Search"}
+           {showGptSearch ? "Browse" : "Bard Search"}
           </button>
           <img
             src={user?.photoURL}

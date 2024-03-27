@@ -1,12 +1,12 @@
 import React from "react";
 import GPTSearchBar from "./GPTSearchBar";
-import GPTSearchResults from "./GPTMovieSuggestions";
+import GPTMovieSuggestions from "./GPTMovieSuggestions";
 
 const GPTSearchPage = () => {
   return (
     <div>
       <GPTSearchBar />
-      <GPTSearchResults />
+      <GPTMovieSuggestions />
     </div>
   );
 };
