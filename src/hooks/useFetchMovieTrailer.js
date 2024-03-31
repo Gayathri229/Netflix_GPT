@@ -5,7 +5,6 @@ import { addTrailerVideo } from "../utils/moviesSlice";
 
 const useFetchMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
-  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
 
   const fetchMovieTrailer = async () => {
     try {
@@ -29,8 +28,7 @@ const useFetchMovieTrailer = (movieId) => {
   };
 
   useEffect(() => {
-    // memoization -> perusa onnum illa... We are only making this api call when the redux store doesn't have the value
-    if (!trailerVideo) fetchMovieTrailer();
+    movieId && fetchMovieTrailer();
   }, []);
 };
 

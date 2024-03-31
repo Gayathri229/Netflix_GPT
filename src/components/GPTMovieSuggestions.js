@@ -1,16 +1,29 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MovieList from "./MovieList";
+import GPTSearchShimmer from "./GPTSearchShimmer";
 
 const GPTMovieSuggestions = () => {
   const { movieNames, movieResults } = useSelector((store) => store.gptSearch);
+  const showSearchResults = useSelector(
+    (store) => store.gptSearch.showSearchResults
+  );
 
-  if (!movieNames) return;
+  // if (!movieNames) return;
 
-  return (
-    <div className="bg-black bg-opacity-30 p-2 text-white">
-      <div>
-        {movieNames.map((movieName, index) => (
+  console.log("movie results", movieResults);
+
+  if (movieResults?.length === 1)
+    <p className="font-netflixSansRegular text-white font-semibold">
+      Search for a different query
+    </p>;
+
+  return showSearchResults && movieResults === null ? (
+    <GPTSearchShimmer />
+  ) : (
+    <div className="bg-black bg-opacity-30 text-white">
+      <div className="p-2">
+        {movieNames?.map((movieName, index) => (
           <MovieList
             key={movieName}
             title={movieName}

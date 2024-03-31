@@ -6,16 +6,39 @@
   background-size: 120%;
 }
 
+@font-face {
+  font-family: "netflixSansRegular";
+  src: url("../src/assets/fonts/NetflixSans-Regular.otf") format("otf");
+}
 
 @font-face {
-  font-family: 'netflixSansRegular';
-  src: url('../src/assets/fonts/NetflixSans-Regular.otf') format('otf');
+  font-family: "netflixSansBold";
+  src: url("../src/assets/fonts/NetflixSans-Bold.otf") format("otf");
+}
+
+.shimmer-effect {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  /* background: linear-gradient(to right, #eef0f5 5%, #cccccc 25%, #eef0f5 35%); */
+  background: linear-gradient(to right, #36454f 5%, #4C5866 25%, #36454f 35%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+
+  to {
+    background-position: 1000px 0;
+  }
 }
 
 
-@font-face {
-  font-family: 'netflixSansBold';
-  src: url('../src/assets/fonts/NetflixSans-Bold.otf') format('otf');
+.gpt-search-shimmer {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #eef0f5 5%, #cccccc 25%, #eef0f5 35%);
+  /* background: linear-gradient(to right, #36454f 5%, #4C5866 25%, #36454f 35%); */
+  background-size: 1000px 100%;
 }
-
-

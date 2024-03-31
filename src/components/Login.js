@@ -95,11 +95,11 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={NETFLIX_BG} alt="Sign in background" />
+        <img src={NETFLIX_BG} alt="Sign in background" className="h-screen md:h-auto object-cover"/>
         <div className="absolute bg-black inset-0 opacity-60"></div>
       </div>
       <form
-        className="absolute bg-black bg-opacity-70 w-4/12 flex flex-col p-12 my-28 mx-auto right-0 left-0 text-white rounded-sm"
+        className="absolute bg-black bg-opacity-70 w-full md:w-4/12 flex flex-col py-2 md:p-12 my-28 mx-auto right-0 left-0 text-white rounded-sm"
         onSubmit={(event) => event.preventDefault()}
       >
         <h1 className="text-3xl font-bold mb-6 mx-8">

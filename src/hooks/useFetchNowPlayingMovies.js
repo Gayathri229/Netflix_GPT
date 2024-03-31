@@ -20,6 +20,7 @@ const useFetchNowPlayingMovies = () => {
   };
 
   useEffect(() => {
+    // memoization -> perusa onnum illa... We are only making this api call when the redux store doesn't have the value
     !nowPlayingMovies && getNowPlayingMovies();
   }, []);
 };

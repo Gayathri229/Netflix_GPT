@@ -1,13 +1,16 @@
 import React from "react";
 import MovieList from "./MovieList";
 import { useSelector } from "react-redux";
+import GPTSearchShimmer from "./GPTSearchShimmer";
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
 
+  !movies && <GPTSearchShimmer/>
+
   return (
       <div className="bg-black text-white">
-        <div className="-mt-56 pl-8 relative z-10">
+        <div className="mt-0 md:-mt-56 md:pl-8 pl-0 relative z-10">
           {movies.nowPlayingMovies && (
             <MovieList title="Now Playing" movies={movies.nowPlayingMovies} />
           )}

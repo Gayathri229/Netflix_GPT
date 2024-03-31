@@ -4,12 +4,17 @@ import lang from "../utils/languageConstants";
 import { useDispatch, useSelector } from "react-redux";
 import { genAI } from "../utils/geminiai";
 import BardAIResultError from "./BardAIResultError";
-import { addBardMovieResult } from "../utils/gptSearchSlice";
+import {
+  addBardMovieResult,
+  clearBardMovieResult,
+  handleShowSearchResults,
+} from "../utils/gptSearchSlice";
 
 const GPTSearchBar = () => {
   const searchRef = useRef(null);
   const dispatch = useDispatch();
   const langKey = useSelector((store) => store.config.lang);
+  const { movieNames, movieResults } = useSelector((store) => store.gptSearch);
 
   const searchTMDBMovies = async (movie) => {
     const data = await fetch(
@@ -24,6 +29,8 @@ const GPTSearchBar = () => {
 
   const handleBardSearch = async () => {
     try {
+      dispatch(handleShowSearchResults(true));
+      dispatch(clearBardMovieResult());
       console.log(searchRef.current.value);
       const geminiQuery =
         "Act as a movie recommendation system and suggest some movies for this query: " +
@@ -51,6 +58,8 @@ const GPTSearchBar = () => {
           tmdbMovieResults: tmdbResults,
         })
       );
+
+      console.log("GPT Search bar movie names", movieResults);
     } catch (error) {
       console.error(error);
     }
