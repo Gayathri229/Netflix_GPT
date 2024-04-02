@@ -160,7 +160,7 @@ const Login = () => {
         <p className="my-2 mx-8">
           {isSignInForm ? (
             <>
-              <span className="opacity-70">New to Netflix? </span>
+              <span className="opacity-70">New to Bardflix? </span>
               <button className="font-semibold" onClick={toggleSignInForm}>
                 Sign up now.
               </button>
