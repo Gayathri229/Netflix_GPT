@@ -11,6 +11,7 @@ import GPTSearchPage from "./GPTSearchPage";
 import { useSelector } from "react-redux";
 import MovieInfoCard from "./MovieInfoCard";
 import Trailer from "./Trailer";
+import Footer from "./Footer";
 
 const Browse = () => {
   const showGPTSearch = useSelector((store) => store.gptSearch.showGPTSearch);
@@ -27,7 +28,7 @@ const Browse = () => {
   useFetchTvShows();
 
   return trailerMovieId ? (
-    <Trailer trailerMovieId={trailerMovieId}/>
+    <Trailer trailerMovieId={trailerMovieId} />
   ) : (
     <div>
       <Header />
@@ -40,6 +41,7 @@ const Browse = () => {
           <SecondaryContainer />
         </>
       )}
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NETFLIX_LOGO from "../assets/Netflix_Logo_PMS.png";
+import BARDFLIX_LOGO from "../assets/images/BardFlix_logo-bigger.png";
 import { SUPPORTED_LANGUAGES, USER_ICON } from "../utils/constants";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -64,9 +64,9 @@ const Header = () => {
   return (
     <div className="absolute w-screen px-0 z-10 flex justify-between bg-gradient-to-b from-black flex-col md:flex-row md:px-8 text-white">
       <img
-        src={NETFLIX_LOGO}
+        src={BARDFLIX_LOGO}
         alt="Netflix logo"
-        className="w-36 md:w-48 mx-auto md:mx-0"
+        className="w-36 md:w-48 mx-auto md:mx-0 "
       />
       {user && (
         <div className="flex m-2 items-center">

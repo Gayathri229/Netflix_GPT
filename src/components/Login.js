@@ -10,6 +10,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { FaEye } from "react-icons/fa";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,15 @@ const Login = () => {
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
+  };
+
+  const handleViewPassword = () => {
+    const password = document.getElementById("password");
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
   };
 
   const handleFormSubmit = () => {
@@ -63,7 +73,6 @@ const Login = () => {
             .catch((error) => {
               setErrorMessage(error.message);
             });
-          console.log("Signed up user", user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -80,7 +89,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log("Signed in User", user);
           // navigate("/browse");
         })
         .catch((error) => {
@@ -95,7 +103,11 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={NETFLIX_BG} alt="Sign in background" className="h-screen md:h-auto object-cover"/>
+        <img
+          src={NETFLIX_BG}
+          alt="Sign in background"
+          className="h-screen md:h-auto object-cover"
+        />
         <div className="absolute bg-black inset-0 opacity-60"></div>
       </div>
       <form
@@ -119,12 +131,19 @@ const Login = () => {
           className="p-4 my-2 mx-8 bg-white bg-opacity-5 border border-white border-opacity-40 rounded-sm"
           ref={email}
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="p-4 my-2 mx-8 bg-white bg-opacity-5 border border-white border-opacity-40 rounded-sm"
-          ref={password}
-        />
+        <div className="relative my-2 mx-8">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            className="p-4 w-full bg-white bg-opacity-5 border border-white border-opacity-40 rounded-sm"
+            ref={password}
+          />
+          <FaEye
+            className="absolute right-5 bottom-5 cursor-pointer"
+            onClick={handleViewPassword}
+          />
+        </div>
         <p className="mx-8 text-red-700 text-sm"> {errorMessage}</p>
         <button
           type="submit"
@@ -133,6 +152,11 @@ const Login = () => {
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
+        <div className="flex items-center my-2 mx-8">
+          <input type="checkbox" value="Remember password" className="mr-1" />
+          <p className="opacity-70 text-sm">Remember Me</p>
+        </div>
+
         <p className="my-2 mx-8">
           {isSignInForm ? (
             <>
@@ -150,6 +174,7 @@ const Login = () => {
             </>
           )}
         </p>
+        {/* <p className="my-2 mx-8 text-sm ">This is not a real Netflix </p> */}
       </form>
     </div>
   );

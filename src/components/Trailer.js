@@ -13,6 +13,7 @@ const Trailer = ({ trailerMovieId }) => {
   const handleCloseTrailer = () => {
     dispatch(handlePlayTrailer(null));
   };
+  
   return (
     <div>
       <div className="w-screen">

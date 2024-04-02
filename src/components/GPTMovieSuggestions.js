@@ -11,26 +11,26 @@ const GPTMovieSuggestions = () => {
 
   // if (!movieNames) return;
 
-  console.log("movie results", movieResults);
-
   if (movieResults?.length === 1)
-    <p className="font-netflixSansRegular text-white font-semibold">
-      Search for a different query
+    <p className="font-netflixSansRegular text-white font-semibold text-xl">
+      No results found. Search for a different query.
     </p>;
 
   return showSearchResults && movieResults === null ? (
     <GPTSearchShimmer />
   ) : (
-    <div className="bg-black bg-opacity-30 text-white">
-      <div className="p-2">
-        {movieNames?.map((movieName, index) => (
-          <MovieList
-            key={movieName}
-            title={movieName}
-            movies={movieResults[index]}
-          />
-        ))}
-      </div>
+    <div className="bg-black bg-opacity-30 text-white h-screen">
+      {movieResults?.length > 0 && (
+        <div className="p-2">
+          {movieNames?.map((movieName, index) => (
+            <MovieList
+              key={movieName}
+              title={movieName}
+              movies={movieResults[index]}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
