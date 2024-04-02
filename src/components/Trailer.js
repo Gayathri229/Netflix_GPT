@@ -18,7 +18,7 @@ const Trailer = ({ trailerMovieId }) => {
     <div>
       <div className="w-screen">
         <div
-          className="absolute flex items-center left-2 top-3 text-white z-10 p-2 bg-white bg-opacity-10 rounded-full cursor-pointer hover:bg-opacity-20 hover:scale-110"
+          className="absolute flex items-center left-2 top-12 text-white z-10 p-2 bg-black bg-opacity-50 rounded-full cursor-pointer hover:scale-110"
           onClick={handleCloseTrailer}
         >
           <FaChevronLeft size={18} className="mr-1" />
