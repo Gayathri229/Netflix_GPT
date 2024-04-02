@@ -33,7 +33,7 @@ const MovieInfoCard = () => {
     <MovieInfoCardShimmer />
   ) : (
     <div className="fixed bg-black bg-opacity-90 w-full h-screen z-20 text-white font-netflixSansRegular rounded-sm overflow-y-scroll scrollbar-hide">
-      <div className="w-3/5 m-auto left-0 right-0">
+      <div className="md:w-3/5 m-auto left-0 right-0">
         <div className="relative">
           <div className="z-20 absolute m-2 p-1 right-1 top-1 rounded-full bg-black bg-opacity-60 hover:bg-opacity-50 cursor-pointer">
             <IoCloseOutline
@@ -42,16 +42,18 @@ const MovieInfoCard = () => {
               onClick={handleMovieInfoClose}
             />
           </div>
-          <div className="z-20 absolute flex bottom-6 mx-8 items-center">
-            <p className="text-4xl font-bold mr-4">
+          <div className="z-20 absolute flex bottom-2 md:bottom-6 mx-4 md:mx-8 items-center">
+            <p className="text-lg md:text-4xl font-bold mr-0 md:mr-4">
               {movieInfo?.movieDetails?.original_title}
             </p>
             <div
-              className="flex items-center text-white text-opacity-60 cursor-pointer border border-black border-opacity-10 bg-black bg-opacity-20 hover:bg-opacity-30 rounded-full px-2 py-1"
+              className="flex items-center text-white text-opacity-60 cursor-pointer border border-black border-opacity-10 bg-black bg-opacity-20 hover:bg-opacity-30 rounded-full ml-1 md:ml-0 px-2 py-1"
               onClick={handleWatchTrailer}
             >
               <FaPlay size={13} className="mr-1 " />
-              <p className="font-semibold text-sm">Watch Trailer</p>
+              <p className="font-semibold text-sm">
+                <span className="hidden md:inline">Watch</span> Trailer
+              </p>
             </div>
           </div>
           <div>
@@ -62,12 +64,12 @@ const MovieInfoCard = () => {
                   : NO_IMAGE
               }
               alt="movie-backdrop"
-              className="w-full h-[490px]"
+              className="w-full md:h-[490px]"
             />
             <div className="absolute bg-black inset-0 opacity-10"></div>
           </div>
         </div>
-        <div className="grid grid-cols-12 my-1 mx-2">
+        <div className="md:grid md:grid-cols-12 my-1 mx-2">
           <div className="col-span-6 m-4">
             <p className="font-bold text-2xl">
               {movieInfo?.movieDetails?.release_date?.split("-")[0]}
@@ -80,19 +82,21 @@ const MovieInfoCard = () => {
                 </span>
               )}
             </p>
-            <p className="text-sm my-2">{movieInfo?.movieDetails?.overview}</p>
+            <p className="text-sm my-2 line-clamp-3 md:line-clamp-6">
+              Overview: {movieInfo?.movieDetails?.overview}
+            </p>
           </div>
           <div className="col-span-6 m-4">
             <p className="text-sm my-2">
               Run time: {movieInfo?.movieDetails?.runtime} mins
             </p>
-            <p className="text-sm">
+            <p className="text-sm hidden md:block">
               {movieInfo?.movieDetails?.release_date && (
                 <span>Premiere: {movieInfo?.movieDetails?.release_date} </span>
               )}
             </p>
             <p className="text-sm my-2">
-              {movieInfo?.movieCredits?.cast && (
+              {movieInfo?.movieCredits?.cast?.length > 0 && (
                 <span>
                   Cast:{" "}
                   {movieInfo?.movieCredits?.cast
@@ -103,10 +107,18 @@ const MovieInfoCard = () => {
               )}
             </p>
             <p className="text-sm my-2">
-              Genre:{" "}
-              {movieInfo?.movieDetails?.genres
-                ?.map((genre) => genre?.name)
-                .join(", ")}
+              {console.log(
+                "genre length",
+                movieInfo?.movieDetails?.genres?.length
+              )}
+              {movieInfo?.movieDetails?.genres?.length > 0 && (
+                <span>
+                  Genre:{" "}
+                  {movieInfo?.movieDetails?.genres
+                    ?.map((genre) => genre?.name)
+                    .join(", ")}
+                </span>
+              )}
             </p>
           </div>
         </div>

@@ -69,7 +69,7 @@ const Header = () => {
         className="w-36 md:w-48 mx-auto md:mx-0 "
       />
       {user && (
-        <div className="flex m-2 items-center">
+        <div className="flex m-2 items-center justify-center">
           {showGptSearch && (
             <select
               className="p-2 m-2 bg-black bg-opacity-80 text-white border border-white border-opacity-60 rounded-sm"

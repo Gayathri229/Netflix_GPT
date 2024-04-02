@@ -23,9 +23,9 @@ const SecondaryContainer = () => {
           {movies.topRatedMovies && (
             <MovieList title="Top Rated" movies={movies.topRatedMovies} />
           )}
-          {movies.tvShows && (
+          {/* {movies.tvShows && (
             <MovieList title="TV Shows" movies={movies.tvShows} />
-          )}
+          )} */}
           {movies.upcomingMovies && (
             <MovieList title="Upcoming movies" movies={movies.upcomingMovies} />
           )}

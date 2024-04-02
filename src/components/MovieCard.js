@@ -29,7 +29,7 @@ const MovieCard = ({ posterPath, movieId }) => {
 
   return (
     <div
-      className="relative w-20 md:w-36 mr-4 hover:scale-110 transition-transform duration-300 ease-in-out"
+      className="relative w-28 md:w-36 mr-4 hover:scale-110 transition-transform duration-300 ease-in-out"
       // onClick={handleCardClick}
       onMouseEnter={() => setIsCardHovered(true)}
       onMouseLeave={() => setIsCardHovered(false)}
@@ -37,12 +37,12 @@ const MovieCard = ({ posterPath, movieId }) => {
       <img
         src={posterPath ? CDN_POSTER_URL + posterPath : NO_IMAGE}
         alt="movie-poster"
-        className="rounded-sm w-full h-48"
+        className="rounded-sm w-full h-44 md:h-48 "
       />
       {isCardHovered && (
         <>
           <div className="absolute bg-black inset-0 opacity-40"></div>
-          <div className="absolute z-10 flex items-center text-white top-20 left-10">
+          <div className="absolute z-10 flex items-center text-white top-16 left-5 md:top-20 md:left-10">
             <FaPlay
               size={22}
               className="m-2 cursor-pointer"

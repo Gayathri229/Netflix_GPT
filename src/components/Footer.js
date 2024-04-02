@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="py-20 px-32 bg-black font-netflixSansRegular text-white text-opacity-70 ">
-      <p className="mx-9 p-2 font-bold font-netflixSansBold">
-        Questions? Call 000-800-919-1694
+    <div className=" py-12 md:py-20 px-4 md:px-32 bg-black font-netflixSansRegular text-white text-opacity-70 ">
+      <p className="mx-3 md:mx-9 p-2 font-bold font-netflixSansBold">
+        Questions? Call <span className="underline">000-800-919-1694</span>
       </p>
-      <div className="flex text-sm underline">
-        <div className="m-6 p-2 mr-16">
+      <div className="flex flex-col md:flex-row text-sm underline">
+        <div className="m-0 md:m-6 p-2 md:mr-16">
           <p className="m-4 cursor-default text-white text-opacity-70 hover:text-opacity-50">
             FAQ
           </p>
@@ -21,7 +21,7 @@ const Footer = () => {
             Speed Test
           </p>
         </div>
-        <div className="m-6 p-2 mr-16">
+        <div className="m-0 md:m-6 p-2 md:mr-16">
           <p className="m-4 cursor-default text-white text-opacity-70 hover:text-opacity-50">
             Help Centre
           </p>
@@ -35,7 +35,7 @@ const Footer = () => {
             Legal Notices
           </p>
         </div>
-        <div className="m-6 p-2 mr-16">
+        <div className="m-0 md:m-6 p-2 md:mr-16">
           <p className="m-4 cursor-default text-white text-opacity-70 hover:text-opacity-50">
             Account
           </p>
@@ -49,7 +49,7 @@ const Footer = () => {
             Only on Netflix
           </p>
         </div>
-        <div className="m-6 p-2 mr-16">
+        <div className="m-0 md:m-6 p-2 md:mr-16">
           <p className="m-4 cursor-default text-white text-opacity-70 hover:text-opacity-50">
             Media Centre
           </p>
@@ -61,7 +61,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <p className="mx-9 p-2">Netflix India</p>
+      <p className="mx-4 md:mx-9 p-2">Netflix India</p>
     </div>
   );
 };

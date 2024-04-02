@@ -4,7 +4,7 @@ import { LuChevronRight } from "react-icons/lu";
 
 const MovieList = ({ title, movies }) => {
   return (
-    <div className="pl-6 py-4">
+    <div className="md:pl-6 pb-4 md:py-4">
       {movies.length > 0 && (
         <>
           <div className="flex items-center">

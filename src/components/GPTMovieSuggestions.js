@@ -19,7 +19,7 @@ const GPTMovieSuggestions = () => {
   return showSearchResults && movieResults === null ? (
     <GPTSearchShimmer />
   ) : (
-    <div className="bg-black bg-opacity-30 text-white h-screen">
+    <div className="bg-black bg-opacity-30 text-white ">
       {movieResults?.length > 0 && (
         <div className="p-2">
           {movieNames?.map((movieName, index) => (
